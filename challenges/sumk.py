@@ -6,7 +6,7 @@
 import timeit
 
 nums = [10, 15, 3, 7]
-k = 21
+k = 17
 
 def brute():
     for i in range(0, len(nums)):
@@ -25,7 +25,9 @@ def bonus():
 
 def main():
     print("k = " + str(k))
+    print("Brute Force: " + str(brute()))
     print("Brute force time O(n^2): " + str(timeit.timeit("brute()", setup="from __main__ import brute")))
+    print("Optimal: " + str(bonus()))
     print("Optimal time O(n): " + str(timeit.timeit("bonus()", setup="from __main__ import bonus")))
 
 if __name__ == "__main__":
